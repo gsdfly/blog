@@ -37,6 +37,7 @@
 </template>
 <script lang="ts">
     import {Vue, Component} from "vue-property-decorator";
+    import instance from "@/utils/api";
 
     @Component
     export default class Articles extends Vue {
@@ -175,9 +176,13 @@
             }];
         href: string = 'articleDetail/';
         params:object = {};
-        tag_name:string = '';mounted() {
+        tag_name:string = '';
+        mounted() {
+            instance.get('/articles',{params:{type:'1'}}).then(()=>{})
             console.log("11111111111");
             console.log(this.$route.query);
+            console.log(new Date(1570796964000));
+            console.log(new Date(1570775364000));
         }
       formatTime(time:string):string{
           return time

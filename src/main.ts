@@ -20,7 +20,8 @@ import {
   FormItem,
   Input,
   Button,
-  Tree
+  Tree,
+  Dialog
 } from "element-ui";
 
 // 按需引用 element 组件
@@ -41,6 +42,7 @@ Vue.component(FormItem.name, FormItem);
 Vue.component(Input.name, Input);
 Vue.component(Button.name, Button);
 Vue.component(Tree.name, Tree);
+Vue.component(Dialog.name, Dialog);
 
 Vue.config.productionTip = false;
 

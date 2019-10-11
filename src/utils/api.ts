@@ -1,17 +1,21 @@
 import axios from 'axios'
 import config from '@/utils/config';
 let instance = axios.create({
-    // baseURL:config.baseURI
+    baseURL:'/api'
 });
 
 instance.interceptors.request.use((config:any) => {
+    let token = localStorage.getItem('token');
+    if(token){
+        config.headers['token'] = token;
+    }
     return config
 },(error:any)=>{
     return Promise.reject(error);
 })
 
 instance.interceptors.response.use((config:any) => {
-    return config
+    return config.data
 },(error:any)=>{
     return Promise.reject(error);
 })
