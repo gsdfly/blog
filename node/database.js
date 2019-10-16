@@ -1,14 +1,25 @@
 
 var mysql  = require('mysql');
-var connection = mysql.createConnection({
+var pool  = mysql.createPool({
+    connectionLimit : 10,
     host     : '47.75.84.250',
     user     : 'root',
     password : '158269',
     database : 'blog'
 });
+// var connection = mysql.createConnection({
+//     host     : '47.75.84.250',
+//     user     : 'root',
+//     password : '158269',
+//     database : 'blog'
+// });
 // connection.connect();
 //
-// var sql = "select * from student";
+
+var sql = "select * from article";
+pool.query(sql,function (err,result,fields) {
+   console.log(result);
+});
 // // var sqlParams = [4,'lisi',23];
 //
 // connection.query(sql,function (err, result) {
@@ -24,4 +35,4 @@ var connection = mysql.createConnection({
 //
 // connection.end();
 
-module.exports = connection
+// module.exports = connection

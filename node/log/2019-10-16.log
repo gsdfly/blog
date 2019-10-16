@@ -1,0 +1,4 @@
+[0mGET /admin/articleType [36m304 [0m61.242 ms - -[0m
+[0mGET /admin/articles?pageNo=1&type= [36m304 [0m145.188 ms - -[0m
+[0mGET /admin/user?page=1 [36m304 [0m68.884 ms - -[0m
+[0mGET /admin/user?page=1 [36m304 [0m70.983 ms - -[0m

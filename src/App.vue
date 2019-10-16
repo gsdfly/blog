@@ -46,9 +46,11 @@
     activeIndex:string = '1';
     @State('isHome') isHome!:boolean;
     @Mutation('changeIsHome') changeIsHome!:(flag:boolean)=>{};
+    mounted(){
+      this.changeRoute();
+    }
     @Watch("$route")
     changeRoute(){
-      console.log(this.$route);
       this.activeIndex = String(this.$route.meta.activeIndex);
       if(this.$route.path === '/'){
         this.changeIsHome(true);
@@ -61,6 +63,8 @@
         this.changeIsHome(false);
       }
     }
+
+
   }
 </script>
 <style lang="less">
