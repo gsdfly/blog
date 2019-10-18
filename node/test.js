@@ -11,4 +11,8 @@
 // console.log(obj);
 // console.log(new Date(Date.now()));
 
-
+let obj = {name:1,age:10};
+let {...params} = obj;
+params.name=2
+console.log(params);
+console.log(obj);

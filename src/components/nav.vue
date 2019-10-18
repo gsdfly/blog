@@ -2,7 +2,7 @@
     <div class="nav">
         <el-row :gutter="26">
             <el-col :span="3">
-                <img src="./../assets/logo.png" alt="" class="logo">
+                <img src="./../assets/logo.png" alt="" class="logo" >
             </el-col>
             <el-col :span="16">
                 <el-menu :router="true"
@@ -19,7 +19,7 @@
                     </el-menuItem>
                 </el-menu>
             </el-col>
-            <el-col :span="5">
+            <el-col :span="5" class="es">
                 <el-button type="primary" @click="loginDialogVisible=true">登录</el-button>
                 <el-button type="primary" @click="registerDialogVisible=true">注册</el-button>
             </el-col>
@@ -139,7 +139,24 @@
 </script>
 
 <style lang="less" scoped>
+    @import "./../less/common";
+    .el-menu.el-menu--horizontal{
+        border-bottom: none;
+    }
+    .el-col {
+        display: flex;
+        align-items: center;
+        height: 59px;
+        &.es{
+            justify-content:flex-end;
+        }
+    }
     .logo{
-        width: 60px;
+        width: 50px;
+    }
+    .nav{
+        width:1200px;
+        margin: 0 auto;
+        padding: 0 20px;
     }
 </style>

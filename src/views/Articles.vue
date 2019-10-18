@@ -194,5 +194,46 @@
 </script>
 
 <style lang="less" scoped>
-
+.articles-list{
+    li{
+        margin: 0  0 10px 0;
+        min-height: 126px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #F0F0F0;
+        a{
+            width: 100%;
+            position: relative;
+            img{
+                width: 125px;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .content{
+                width: 700px;
+                .title{
+                    font-size: 20px;
+                    line-height: 30px;
+                    color: black;
+                }
+                .abstract{
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #555;
+                    margin: 10px 0 0 0;
+                }
+                .meta{
+                    color: #555;
+                    font-size: 12px;
+                    display: flex;
+                    margin: 20px 0 5px 0;
+                    span{
+                        margin: 0 10px 0 0;
+                    }
+                }
+            }
+        }
+    }
+}
 </style>

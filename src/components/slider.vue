@@ -1,27 +1,9 @@
 <template>
     <div class="right slider">
         <img class="right-logo"
-             src="./../assets/userLogo.jpeg"
+             src="./../assets/cat1.jpg"
              alt="">
-        <div class="title">夜尽天明</div>
-        <div class="right-content">
-            <div class="item">
-                <div class="num">123</div>
-                粉丝
-            </div>
-            <div class="item">
-                <div class="num">123</div>
-                文章
-            </div>
-            <div class="item">
-                <div class="num">123</div>
-                字数
-            </div>
-            <div class="item">
-                <div class="num">123</div>
-                收获喜欢
-            </div>
-        </div>
+        <div class="name">噶士大夫</div>
         <div class="tags">
             <div class="title">标签云</div>
             <router-link v-for="item in list"
@@ -35,16 +17,16 @@
             <div class="title">技术以内的 BB</div>
             <div class="content">
                 <img style="width:100%;"
-                     src="./../assets/BiaoChenXuYing.png"
-                     alt="全栈修炼"/>
+                     src="./../assets/a.jpg"
+                     alt="风景1"/>
             </div>
         </div>
         <div class="introduce">
             <div class="title">技术以外的 BB</div>
             <div class="content">
                 <img style="width:100%;"
-                     src="./../assets/YingHeZaHuoPu.png"
-                     alt="硬核杂货铺"/>
+                     src="./../assets/a.jpg"
+                     alt="风景2"/>
             </div>
         </div>
     </div>
@@ -109,7 +91,42 @@
 </script>
 
 <style lang="less" scoped>
-.right-logo{
-    width: 100px;
-}
+    .right-logo {
+        width: 100px;
+        display: block;
+        margin: 30px auto 0 auto;
+    }
+     .name{
+        font-size: 20px;
+        text-align: center;
+        margin: 20px 0;
+    }
+    .title{
+         width: 100%;
+         text-align: center;
+         font-size: 16px;
+         font-weight: 600;
+         color: #B6A1EE;
+        margin: 20px 0;
+    }
+    .tags{
+        width: 100%;
+        border-top: 1px solid #F0F0F0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        a{
+            padding: 5px 10px;
+            background: #EEEEEE;
+            float: left;
+            color: #000;
+            border-radius: 5px;
+            font-size: 12px;
+            margin: 0 10px 10px ;
+            &:hover{
+                color: #fff;
+                background: #1FA2D1;
+            }
+        }
+    }
 </style>

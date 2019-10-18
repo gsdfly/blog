@@ -4,11 +4,11 @@
       <el-header>
         <Nav :activeIndex="activeIndex"/>
       </el-header>
-      <el-container>
-        <el-main style="background: pink">
+      <el-container style="margin: 60px 0 0  0">
+        <el-main>
           <router-view/>
         </el-main>
-        <el-aside width="200px" v-if="!isArticleDetail">
+        <el-aside width="300px" v-if="!isArticleDetail">
           <Slider/>
         </el-aside>
       </el-container>
@@ -68,8 +68,19 @@
   }
 </script>
 <style lang="less">
-#app{
-  width: 1200px;
-  margin: 0 auto;
-}
+  @import "less/index";
+  #app{
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+  .el-header{
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid #F0F0F0;
+    background: #fff;
+    z-index: 999;
+    left: 0;
+    top: 0;
+  }
 </style>

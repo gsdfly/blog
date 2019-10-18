@@ -29,5 +29,8 @@ let timestampToTime=function(timestamp) {
     const m = date.getMinutes() < 10 ? '0' + date.getMinutes() + ':' : date.getMinutes() + ':';
     const s = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds();
     return Y + M + D + h + m + s;
-}
-exports.timestampToTime=timestampToTime
+};
+exports.timestampToTime=timestampToTime;
+
+
+

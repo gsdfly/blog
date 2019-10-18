@@ -63,12 +63,12 @@ const User = sequelize.define('user2', {
     // 参数
     timestamps: false
 });
-User.sync({ force: true })
+// User.sync({ force: true })
 // 查找所有用户
-// User.findAll().then(users => {
-//     console.log(users);
-//     console.log("All users:", JSON.stringify(users, null, 4));
-// });
+User.findAll().then(users => {
+    console.log(users);
+    console.log("All users:", JSON.stringify(users, null, 4));
+});
 //
 // // 创建新用户
 // User.create({ firstName: "Jane", lastName: "Doe" }).then(jane => {
